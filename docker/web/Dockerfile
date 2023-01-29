@@ -2,7 +2,7 @@ FROM php:8.1-apache
 
 # install package
 RUN apt-get update \
-  && apt-get install -y zlib1g-dev libpq-dev \
+  && apt-get install -y zlib1g-dev libpq-dev git zip unzip \
   && docker-php-ext-install pdo_mysql mysqli
 
 # install composer
