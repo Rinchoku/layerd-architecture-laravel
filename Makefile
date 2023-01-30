@@ -11,6 +11,9 @@ down:
 web/bash:
 	docker exec -it web bash
 
+web/artisan:
+	docker exec -it web php /var/www/html/app/artisan $(CMD)
+
 web/composer:
 	docker exec -it web composer $(CMD)
 
