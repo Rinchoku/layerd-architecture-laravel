@@ -19,4 +19,4 @@ web/composer:
 	docker exec -it web composer $(CMD)
 
 mysql/bash:
-	docker exec -it web 
+	docker exec -it mysql bash 
