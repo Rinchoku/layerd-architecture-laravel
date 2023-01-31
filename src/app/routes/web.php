@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(
+    [
+        'prefix'    => 'demo',
+        'namespace' => 'App\Http\Controllers\Demo',
+    ],
+    function () {
+        Route::get('/', 'IndexController@index');
+    }
+);
