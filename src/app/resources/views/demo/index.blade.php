@@ -7,5 +7,8 @@
 </head>
 <body>
     <h1>Hello World!!</h1>
+    @foreach ($users as $user)
+        <p>This is user {{ $user->last_name }} {{ $user->first_name }}</p>
+    @endforeach
 </body>
 </html>
