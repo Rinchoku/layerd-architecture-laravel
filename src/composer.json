@@ -5,5 +5,7 @@
             "Root\\Html\\": "src/"
         }
     },
-    "require": {}
+    "require-dev": {
+        "laravel/breeze": "^1.18"
+    }
 }
