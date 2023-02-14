@@ -1,1 +1,3 @@
-# php-docker
+# laravel
+
+Laravelを動かすためのコンテナー
