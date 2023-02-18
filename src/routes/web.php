@@ -19,9 +19,10 @@ Route::get('/', function () {
 
 Route::get('/login', function () {
     return view('auth.login');
-});
+})->name('login');
 
 Route::post('/login', 'App\Http\Controllers\Auth\LoginController@authenticate');
+Route::get('/logout', 'App\Http\Controllers\Auth\LoginController@logout');
 
 Route::middleware(['auth', 'auth.session'])->group(function () {
     Route::get('/test', 'App\Http\Controllers\TestController@index');
