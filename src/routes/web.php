@@ -24,6 +24,12 @@ Route::get('/login', function () {
 Route::post('/login', 'App\Http\Controllers\Auth\LoginController@authenticate');
 Route::get('/logout', 'App\Http\Controllers\Auth\LoginController@logout');
 
+Route::group([
+    'prefix' => 'demo',
+], function () {
+    Route::get('s3', 'App\Http\Controllers\DemoController@s3');
+});
+
 Route::middleware(['auth', 'auth.session'])->group(function () {
     Route::get('/test', 'App\Http\Controllers\TestController@index');
 });
