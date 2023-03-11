@@ -1,3 +1,3 @@
-# laravel
+# layered-architecture-laravel
 
-Laravelを動かすためのコンテナー
+Laravelでレイヤードアーキテクチャを構築してみるためのレポジトリ
