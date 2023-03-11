@@ -1,3 +1,8 @@
+setup:
+	$(MAKE) web/composer CMD="install"
+	$(MAKE) web/artisan CMD="key:generate"
+	$(MAKE) web/artisan CMD="migrate"
+
 build:
 	docker compose down
 	docker compose build
