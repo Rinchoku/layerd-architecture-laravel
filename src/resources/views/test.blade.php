@@ -1,6 +1,8 @@
 <html>
     <body>
         <h1>Login Success</h1>
-        <p>{{ $user->email }}</p>
+        @foreach ($users as $user)
+            <p>{{ $user->email }}</p>
+        @endforeach
     </body>
 </html>

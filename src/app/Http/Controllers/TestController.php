@@ -3,16 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class TestController extends Controller
 {
     public function index(Request $request)
     {
-        $user = Auth::user();
+        $users = User::get();
 
         return view('test')->with([
-            'user' => $user,
+            'users' => $users,
         ]);
     }
 }
